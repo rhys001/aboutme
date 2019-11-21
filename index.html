@@ -7,29 +7,24 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
 }
-
 /* Header/Blog Title */
 .header {
     padding: 0px 0px 0px 0px;
     margin-bottom: 0px;
     background-color: white;
 }
-
 .header-image {
     width: 100%;
     height: 100%;
 }    
-
 #header-image1 {
     display: inline;
 }
-
 #header-image2 {
     display: none;
 }    
@@ -52,7 +47,6 @@ body {
     top: 35px;
     padding-right: 30px;
  }
-
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -69,11 +63,36 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 /* Change color on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+}
+    
+/* Style the top navigation bar */
+.topnav-2 {
+    display: none;
+    overflow: hidden;
+    background-color: #333;
+    margin-top: 0px;
+}
+/* Style the topnav links */
+.topnav-2 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change color on hover */
+.topnav-2 a:hover {
+    background-color: #ddd;
+    color: black;
+}
+    
+#menu {
+    padding: 9px 0px 5px 13px;  
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -82,7 +101,6 @@ body {
     float: left;
     width: 75%;
 }
-
 /* Right column */
 .rightcolumn {
     float: left;
@@ -90,28 +108,24 @@ body {
     background-color: #f1f1f1;
     padding-left: 20px;
 }
-
 /* Fake image */
 .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
 }
-
 /* Add a card effect for articles */
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Footer */
 .footer {
     padding: 20px;
@@ -119,20 +133,32 @@ body {
     background: #ddd;
     margin-top: 20px;
 }
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 1030px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1030px) {
     .leftcolumn, .rightcolumn {   
         width: 100%;
         padding: 0;
     }
+    .topnav {
+        display: none;
+    }
+    .topnav-2 {
+        display: block;
+    }
+    
 }
     
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 700px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
+    .topnav {
+        display: block;
+    }
     .topnav a {
         float: none;
         width: 100%;
+    }
+    .topnav-2 {
+        display: none;
     }
     #header-image2 {
         display: inline;
@@ -161,6 +187,10 @@ body {
   <a href="#">Link 3</a>
   <a href="#">Link 4</a>
   <a href="#" style="float:right">Contact us</a>
+</div>
+    
+<div class="topnav-2">
+  <img id="menu" src="images/fav-icon_white.png">
 </div>
 
 <div class="row">
